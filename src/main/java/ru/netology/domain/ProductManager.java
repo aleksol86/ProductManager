@@ -8,7 +8,6 @@ import lombok.Data;
 public class ProductManager {
     private Repository repo;
 
-
     public void addProduct(Product item) {
         repo.save(item);
     }
