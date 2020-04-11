@@ -1,7 +1,11 @@
-package ru.netology.domain;
+package ru.netology.domain.manager;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.repository.Repository;
+import ru.netology.domain.Smartphone;
 
 @AllArgsConstructor
 @Data
@@ -18,7 +22,7 @@ public class ProductManager {
             if (matches(item, text)) {
                 Product[] tmp = new Product[newList.length + 1];
                 System.arraycopy(newList, 0, tmp, 0, newList.length);
-                tmp[tmp.length - 1] = item;//
+                tmp[tmp.length - 1] = item;
                 newList = tmp;
             }
         }
