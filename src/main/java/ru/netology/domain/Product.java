@@ -13,9 +13,6 @@ public class Product {
     private int price;
 
     public boolean matches(String search) {
-        if (this.getName().matches(search)) {
-            return true;
-        }
-        return false;
+        return this.getName().matches(search);
     }
 }
